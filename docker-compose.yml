@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  customer-service.api:
+    image: ${DOCKER_REGISTRY-}customerserviceapi
+    build:
+      context: .
+      dockerfile: Customer-Service.API/Dockerfile
