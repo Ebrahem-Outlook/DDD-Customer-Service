@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Customer_Service.Domain.Core.BaseType.Result;
+using MediatR;
 
-namespace Customer_Service.Application.Core.Messaging
+namespace Customer_Service.Application.Core.Messaging;
+
+public interface IQuery<TResponse> : IRequest<TResponse>
+    where TResponse : Result
 {
-    internal class IQuery
-    {
-    }
+
 }

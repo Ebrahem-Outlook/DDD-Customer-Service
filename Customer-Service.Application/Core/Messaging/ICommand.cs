@@ -1,5 +1,10 @@
-﻿namespace Customer_Service.Application.Core.Messaging;
+﻿using Customer_Service.Domain.Core.BaseType.Result;
+using MediatR;
 
-internal class ICommand
+namespace Customer_Service.Application.Core.Messaging;
+
+public interface ICommand<out TResponse> : IRequest<TResponse>
+    where TResponse : Result
 {
+
 }
