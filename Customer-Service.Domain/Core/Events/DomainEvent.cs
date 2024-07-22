@@ -5,10 +5,10 @@ public record DomainEvent : IDomainEvent
     public DomainEvent()
     {
         Id = Guid.NewGuid();
-        OccuerOn = DateTime.UtcNow;
+        CreatedOn = DateTime.UtcNow;
     }
 
     public Guid Id { get; }
 
-    public DateTime OccuerOn { get; }
+    public DateTime CreatedOn { get; }
 }
