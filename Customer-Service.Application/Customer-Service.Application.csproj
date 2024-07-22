@@ -11,4 +11,11 @@
     <ProjectReference Include="..\Customer-Service.Domain\Customer-Service.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\Abstractions\" />
+    <Folder Include="Customers\Commands\" />
+    <Folder Include="Customers\Events\" />
+    <Folder Include="Customers\Queries\" />
+  </ItemGroup>
+
 </Project>
