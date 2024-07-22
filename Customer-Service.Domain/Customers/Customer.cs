@@ -4,7 +4,7 @@ using Customer_Service.Domain.Customers.ValueObjects;
 
 namespace Customer_Service.Domain.Customers;
 
-public sealed class Customer : AggregateRoot<CustomerId>
+public sealed class Customer : AggregateRoot<CustomerId>, 
 {
     private Customer(Name name, Email email, Address address, PhoneNumber phoneNumber) : base(CustomerId.Create())
     {
