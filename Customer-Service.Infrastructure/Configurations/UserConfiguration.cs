@@ -8,6 +8,14 @@ internal sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
 {
     public void Configure(EntityTypeBuilder<Customer> builder)
     {
-        throw new NotImplementedException();
+        builder.HasKey(customer => customer.Id);
+
+        builder.Property(customer => customer.Email.Address).HasMaxLength(50).IsRequired();
+
+        builder.Property(customer => customer.Email.Address).HasMaxLength(50).IsRequired();
+
+        builder.Property(customer => customer.Email.Address).HasMaxLength(50).IsRequired();
+
+        builder.Property(customer => customer.Email.Address).HasMaxLength(50).IsRequired();
     }
 }

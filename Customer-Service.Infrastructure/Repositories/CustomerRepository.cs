@@ -28,7 +28,7 @@ internal sealed class CustomerRepository(IDbContext dbContext) : ICustomerReposi
 
     public async Task<List<Customer>?> GetAllAsync(string name, CancellationToken cancellationToken = default)
     {
-        return await dbContext.Set<Customer>().Where(c => c.Name.Value == name).ToListAsync(cancellationToken);   
+        return await dbContext.Set<Customer>().Where(c => c.Name.FirstName == name).ToListAsync(cancellationToken);   
     }
 
     public async Task<Customer?> GetByIdAsync(string id, CancellationToken cancellationToken = default)

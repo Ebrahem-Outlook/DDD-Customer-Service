@@ -13,9 +13,14 @@
 
   <ItemGroup>
     <Folder Include="Core\Events\" />
-    <Folder Include="Customers\Commands\" />
-    <Folder Include="Customers\Events\" />
-    <Folder Include="Customers\Queries\" />
+    <Folder Include="Customers\Commands\CreateCustomer\" />
+    <Folder Include="Customers\Commands\DeleteCustomer\" />
+    <Folder Include="Customers\Commands\UpdateCustomer\" />
+    <Folder Include="Customers\Events\CustomerCreated\" />
+    <Folder Include="Customers\Events\CustomerUpdated\" />
+    <Folder Include="Customers\Events\CustomerDeleted\" />
+    <Folder Include="Customers\Queries\GetById\" />
+    <Folder Include="Customers\Queries\GetByName\" />
   </ItemGroup>
 
   <ItemGroup>
