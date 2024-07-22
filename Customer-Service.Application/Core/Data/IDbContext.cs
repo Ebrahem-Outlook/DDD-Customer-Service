@@ -1,5 +1,4 @@
-﻿using Customer_Service.Domain.Core.BaseType;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Customer_Service.Application.Core.Data;
 
