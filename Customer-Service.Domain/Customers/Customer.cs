@@ -4,7 +4,7 @@ using Customer_Service.Domain.Customers.ValueObjects;
 
 namespace Customer_Service.Domain.Customers;
 
-public sealed class Customer : AggregateRoot<CustomerId>, 
+public sealed class Customer : AggregateRoot<CustomerId>
 {
     private Customer(Name name, Email email, Address address, PhoneNumber phoneNumber) : base(CustomerId.Create())
     {
@@ -25,10 +25,18 @@ public sealed class Customer : AggregateRoot<CustomerId>,
     {
         Customer customer = new(name, email, address, phoneNumber);
 
-        customer.Raise(new CustomerCreatedDomainEvent());
+        customer.Raise(new CustomerCreatedDomainEvent(customer));
 
         return customer;
     }
 
+    public void Update(Name name, Email email, Address address, PhoneNumber phone)
+    {
+        Name = name;
+        Email = email;
+        Address = address;
+        PhoneNumber = phone;
 
+        Raise(new CustomerUpdatedDomainEvent(this));
+    }
 }
