@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer-Service.Domain", "Customer-Service.Domain\Customer-Service.Domain.csproj", "{9A10EB44-2166-4BD5-81FA-4D619F29C184}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer-Service.Domain", "Customer-Service.Domain\Customer-Service.Domain.csproj", "{9A10EB44-2166-4BD5-81FA-4D619F29C184}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer-Service.Application", "Customer-Service.Application\Customer-Service.Application.csproj", "{9A81A362-D242-4498-AFF4-2D2FEDD323BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer-Service.Application", "Customer-Service.Application\Customer-Service.Application.csproj", "{9A81A362-D242-4498-AFF4-2D2FEDD323BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer-Service.Infrastructure", "Customer-Service.Infrastructure\Customer-Service.Infrastructure.csproj", "{F4B11B8F-8B12-4748-8EBF-5DBEBECAF9A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer-Service.Infrastructure", "Customer-Service.Infrastructure\Customer-Service.Infrastructure.csproj", "{F4B11B8F-8B12-4748-8EBF-5DBEBECAF9A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer-Service.API", "Customer-Service.API\Customer-Service.API.csproj", "{D7555918-5AD6-4C68-B0F3-BF6997030476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer-Service.API", "Customer-Service.API\Customer-Service.API.csproj", "{D7555918-5AD6-4C68-B0F3-BF6997030476}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BF0CDA69-7958-4C9B-99CF-7F708BA33485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer-Service.IntegrationEvent", "..\Customer-Service.IntegrationEvent\Customer-Service.IntegrationEvent.csproj", "{6A0ACB73-EF41-478A-A323-91B72E3E1894}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BF0CDA69-7958-4C9B-99CF-7F708BA33485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF0CDA69-7958-4C9B-99CF-7F708BA33485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF0CDA69-7958-4C9B-99CF-7F708BA33485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0ACB73-EF41-478A-A323-91B72E3E1894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0ACB73-EF41-478A-A323-91B72E3E1894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0ACB73-EF41-478A-A323-91B72E3E1894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0ACB73-EF41-478A-A323-91B72E3E1894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

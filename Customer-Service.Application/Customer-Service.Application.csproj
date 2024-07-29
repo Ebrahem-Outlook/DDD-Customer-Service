@@ -8,11 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Core\Events\**" />
+    <EmbeddedResource Remove="Core\Events\**" />
+    <None Remove="Core\Events\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Customer-Service.Domain\Customer-Service.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Events\" />
     <Folder Include="Customers\Commands\CreateCustomer\" />
     <Folder Include="Customers\Commands\DeleteCustomer\" />
     <Folder Include="Customers\Commands\UpdateCustomer\" />

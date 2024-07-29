@@ -1,7 +1,9 @@
 ﻿using Customer_Service.Application.Core.Data;
+using Customer_Service.Application.Core.Emails;
 using Customer_Service.Domain.Customers;
 using Customer_Service.Infrastructure.Caching;
 using Customer_Service.Infrastructure.Database;
+using Customer_Service.Infrastructure.Emails;
 using Customer_Service.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
@@ -43,7 +45,9 @@ public static class DependencyInjection
 
 
         // Email Service...
-        services.AddScoped<>
+        services.AddScoped<IEmailService, EmailService>();
+
+
 
         return services;
     }
