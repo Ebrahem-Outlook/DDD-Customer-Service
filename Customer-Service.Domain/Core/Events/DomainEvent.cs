@@ -2,10 +2,14 @@
 
 public record DomainEvent : IDomainEvent
 {
-    public DomainEvent()
+    public DomainEvent() : this(Guid.NewGuid(), DateTime.UtcNow)
     {
-        Id = Guid.NewGuid();
-        CreatedOn = DateTime.UtcNow;
+    }
+
+    private DomainEvent(Guid id, DateTime createdOn)
+    {
+        Id = id;
+        CreatedOn = createdOn;
     }
 
     public Guid Id { get; }

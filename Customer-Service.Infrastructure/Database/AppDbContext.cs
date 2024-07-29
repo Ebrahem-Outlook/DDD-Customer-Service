@@ -1,5 +1,6 @@
 ﻿using Customer_Service.Application.Core.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Reflection;
 
 namespace Customer_Service.Infrastructure.Database;
@@ -18,8 +19,15 @@ public sealed class AppDbContext : DbContext, IDbContext, IUnitOfWork
         return await base.SaveChangesAsync(cancellationToken);
     }
 
+    public async Task<IDbContextTransaction> BeginTransaction(CancellationToken cancellationToken)
+    {
+        return await Database.BeginTransactionAsync(cancellationToken);
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }

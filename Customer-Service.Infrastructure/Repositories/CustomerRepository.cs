@@ -11,14 +11,18 @@ internal sealed class CustomerRepository(IDbContext dbContext) : ICustomerReposi
         await dbContext.Set<Customer>().AddAsync(customer, cancellationToken);
     }
 
-    public void Update(Customer customer)
+    public async Task Update(Customer customer, CancellationToken cancellationToken = default)
     {
         dbContext.Set<Customer>().Update(customer);
+
+        await Task.CompletedTask;
     }
 
-    public void Delete(Customer customer)
+    public async Task Delete(Customer customer, CancellationToken cancellationToken = default)
     {
         dbContext.Set<Customer>().Remove(customer);
+
+        await Task.CompletedTask;
     }
 
     public async Task<List<Customer>?> GetAllAsync(CancellationToken cancellationToken = default)
@@ -26,7 +30,7 @@ internal sealed class CustomerRepository(IDbContext dbContext) : ICustomerReposi
         return await dbContext.Set<Customer>().ToListAsync(cancellationToken);
     }
 
-    public async Task<List<Customer>?> GetAllAsync(string name, CancellationToken cancellationToken = default)
+    public async Task<List<Customer>?> GetByNameAsync(string name, CancellationToken cancellationToken = default)
     {
         return await dbContext.Set<Customer>().Where(c => c.Name.FirstName == name).ToListAsync(cancellationToken);   
     }

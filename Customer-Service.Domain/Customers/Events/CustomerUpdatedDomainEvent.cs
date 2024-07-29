@@ -2,4 +2,4 @@
 
 namespace Customer_Service.Domain.Customers.Events;
 
-public sealed record CustomerUpdatedDomainEvent(Customer Customer) : DomainEvent;
+public sealed record CustomerUpdatedDomainEvent(Customer Customer) : DomainEvent();
