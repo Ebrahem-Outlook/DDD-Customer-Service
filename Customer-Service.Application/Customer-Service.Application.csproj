@@ -18,20 +18,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Customers\Commands\CreateCustomer\" />
-    <Folder Include="Customers\Commands\DeleteCustomer\" />
-    <Folder Include="Customers\Commands\UpdateCustomer\" />
-    <Folder Include="Customers\Events\CustomerCreated\" />
-    <Folder Include="Customers\Events\CustomerUpdated\" />
-    <Folder Include="Customers\Events\CustomerDeleted\" />
-    <Folder Include="Customers\Queries\GetById\" />
-    <Folder Include="Customers\Queries\GetByName\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.9.2" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Customers\Commands\DeleteCustomer\" />
+    <Folder Include="Customers\Commands\UpdateCustomer\" />
+    <Folder Include="Customers\Events\CustomerUpdated\" />
+    <Folder Include="Customers\Events\CustomerCreated\" />
+    <Folder Include="Customers\Events\CustomerDeleted\" />
+    <Folder Include="Customers\Queries\GetByName\" />
   </ItemGroup>
 
 </Project>

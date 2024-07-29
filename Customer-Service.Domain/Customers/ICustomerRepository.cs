@@ -9,6 +9,6 @@ public interface ICustomerRepository
 
     // Queries.
     Task<List<Customer>?> GetAllAsync(CancellationToken cancellationToken = default);
-    Task<Customer?> GetByIdAsync(string id, CancellationToken cancellationToken = default);
+    Task<Customer?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     Task<List<Customer>?> GetByNameAsync(string name, CancellationToken cancellationToken = default);
 }
