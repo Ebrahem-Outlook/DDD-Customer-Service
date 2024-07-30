@@ -9,8 +9,11 @@
 
   <ItemGroup>
     <Compile Remove="Core\Events\**" />
+    <Compile Remove="Customers\Events\**" />
     <EmbeddedResource Remove="Core\Events\**" />
+    <EmbeddedResource Remove="Customers\Events\**" />
     <None Remove="Core\Events\**" />
+    <None Remove="Customers\Events\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,9 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Customers\Events\CustomerUpdated\" />
-    <Folder Include="Customers\Events\CustomerCreated\" />
-    <Folder Include="Customers\Events\CustomerDeleted\" />
     <Folder Include="Customers\Queries\GetByName\" />
   </ItemGroup>
 

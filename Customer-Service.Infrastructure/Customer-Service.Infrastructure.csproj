@@ -8,12 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Customer-Service.Application\Customer-Service.Application.csproj" />
+    <Compile Remove="Authentication\**" />
+    <Compile Remove="Rabbitmq\**" />
+    <EmbeddedResource Remove="Authentication\**" />
+    <EmbeddedResource Remove="Rabbitmq\**" />
+    <None Remove="Authentication\**" />
+    <None Remove="Rabbitmq\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authentication\" />
-    <Folder Include="Rabbitmq\" />
+    <ProjectReference Include="..\Customer-Service.Application\Customer-Service.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
