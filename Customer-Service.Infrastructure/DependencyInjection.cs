@@ -16,10 +16,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        // EFCore service...
         services.AddDbContext<AppDbContext>(options =>
         {
-            string? connection = configuration.GetConnectionString("Docker-Postgres");
+            string? connection = configuration.GetConnectionString("Postgres");
 
             options.UseNpgsql(connection);
         });

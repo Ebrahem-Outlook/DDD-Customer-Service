@@ -10,8 +10,10 @@ public sealed class Name : ValueObject
         LastName = lastName;
     }
 
-    public string FirstName { get; }
-    public string LastName { get; }
+    private Name() { }
+
+    public string FirstName { get; } = default!;
+    public string LastName { get; } = default!;
 
     public static Name Create(string firstName, string lastName)
     {

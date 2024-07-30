@@ -6,7 +6,9 @@ public sealed class CustomerId : ValueObject
 {
     private CustomerId(string value) => Value = value;
 
-    public string Value { get; }
+    private CustomerId() { }
+
+    public string Value { get; } = default!;
 
     public static CustomerId Create()
     {

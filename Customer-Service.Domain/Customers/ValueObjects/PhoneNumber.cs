@@ -5,13 +5,20 @@ namespace Customer_Service.Domain.Customers.ValueObjects;
 
 public sealed class PhoneNumber : ValueObject
 {
-    public string CountryCode { get; }
-    public string Number { get; }
-
     public PhoneNumber(string countryCode, string number)
     {
-        CountryCode = countryCode ?? throw new ArgumentNullException("Country code is required.", nameof(countryCode));
-        Number = number ?? throw new ArgumentNullException("Invalid phone number.", nameof(number));
+        CountryCode = countryCode;
+        Number = number;
+    }
+
+    private PhoneNumber() { }
+
+    public string CountryCode { get; } = default!;
+    public string Number { get; } = default!;
+
+    public static PhoneNumber Create(string countryCode, string number)
+    {
+        return new PhoneNumber(countryCode, number);
     }
 
     public bool IsValidPhoneNumber(string number)

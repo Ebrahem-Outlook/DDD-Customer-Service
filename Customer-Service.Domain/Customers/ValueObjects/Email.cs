@@ -7,7 +7,9 @@ public sealed class Email : ValueObject
 {
     private Email(string address) => Address = address;
 
-    public string Address { get; }
+    private Email() { }
+
+    public string Address { get; } = default!;
 
     public static Email Create(string address)
     {

@@ -7,7 +7,7 @@ namespace Customer_Service.Infrastructure.Database;
 
 public sealed class AppDbContext : DbContext, IDbContext, IUnitOfWork
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public AppDbContext(DbContextOptions options) : base(options) { }
 
     public new DbSet<TEntity> Set<TEntity>() where TEntity : class
     {
