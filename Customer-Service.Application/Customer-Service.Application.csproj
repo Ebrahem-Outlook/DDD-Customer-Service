@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Customers\Commands\UpdateCustomer\" />
     <Folder Include="Customers\Events\CustomerUpdated\" />
     <Folder Include="Customers\Events\CustomerCreated\" />
     <Folder Include="Customers\Events\CustomerDeleted\" />
