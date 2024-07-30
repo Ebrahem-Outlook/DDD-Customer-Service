@@ -4,6 +4,8 @@ using Customer_Service.Application.Core.Emails;
 using Customer_Service.Application.Core.Messaging;
 using Customer_Service.Domain.Customers;
 using Customer_Service.Domain.Customers.ValueObjects;
+using FluentValidation;
+using FluentValidation.Validators;
 using Microsoft.Extensions.Logging;
 
 namespace Customer_Service.Application.Customers.Commands.CreateCustomer;
@@ -28,5 +30,13 @@ internal sealed class CreateCustomerCommandHandler : ICommandHandler<CreateCusto
         Name name = Name.Create(request.FirstName, request.LastName);
         Email email = Email.Create(request.Email);
         Address address = Address.Create(request)
+    }
+}
+
+internal sealed class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCommand>
+{
+    public CreateCustomerCommandValidator()
+    {
+        RuleFor(customer => customer.FirstName)
     }
 }

@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Customer_Service.Application.Core.Messaging;
 
-public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand>
+public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand, Result>
     where TCommand : ICommand
 {
 
@@ -11,7 +11,7 @@ public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand>
 
 public interface ICommandHandler<in TCommand, TResponse> : IRequestHandler<TCommand, TResponse>
     where TCommand : ICommand<TResponse>
-    where TResponse : class
+    where TResponse : Result<TResponse>
 {
 
 }

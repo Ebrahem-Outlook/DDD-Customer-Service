@@ -16,12 +16,14 @@ public sealed class Customer : AggregateRoot<CustomerId>
     /// <param name="email"></param>
     /// <param name="address"></param>
     /// <param name="phoneNumber"></param>
-    private Customer(Name name, Email email, Address address, PhoneNumber phoneNumber) : base(CustomerId.Create())
+    private Customer(Name name, Email email, Address address, PhoneNumber phoneNumber) 
+        : base(CustomerId.Create())
     {
         Name = name;
         Email = email;
         Address = address;
         PhoneNumber = phoneNumber;
+        CreatedOn = DateTime.UtcNow;
     }
 
     /// <summary>
@@ -48,6 +50,10 @@ public sealed class Customer : AggregateRoot<CustomerId>
     /// 
     /// </summary>
     public PhoneNumber PhoneNumber { get; private set; } = default!;
+
+    public DateTime CreatedOn { get; }
+
+    public DateTime? UpdatedOn { get; private set; }
 
     /// <summary>
     /// 
@@ -79,6 +85,7 @@ public sealed class Customer : AggregateRoot<CustomerId>
         Email = email;
         Address = address;
         PhoneNumber = phone;
+        UpdatedOn = DateTime.UtcNow;
 
         Raise(new CustomerUpdatedDomainEvent(this));
     }
