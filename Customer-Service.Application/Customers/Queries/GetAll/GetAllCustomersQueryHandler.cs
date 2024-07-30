@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Customer_Service.Application.Customers.Queries.GetAll;
 
-internal sealed class GetAllCustomersQueryHandler : IQueryHandler<GetAllCustomersQuery, Result<List<Customer>>>
+/*internal sealed class GetAllCustomersQueryHandler : IQueryHandler<GetAllCustomersQuery, Result<List<Customer>>>
 {
     private readonly ICustomerRepository _customerRepository;
     private readonly ILogger<GetAllCustomersQueryHandler> _logger;
@@ -30,6 +30,6 @@ internal sealed class GetAllCustomersQueryHandler : IQueryHandler<GetAllCustomer
 
         _logger.LogInformation("Request End {RequestName}, {DateTime}", typeof(GetAllCustomersQuery).Name, DateTime.UtcNow);
 
-        return customers.;
+        return customers;
     }
-}
+}*/

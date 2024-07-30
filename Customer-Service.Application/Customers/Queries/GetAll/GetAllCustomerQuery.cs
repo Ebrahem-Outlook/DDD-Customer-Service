@@ -4,4 +4,4 @@ using Customer_Service.Domain.Customers;
 
 namespace Customer_Service.Application.Customers.Queries.GetAll;
 
-public sealed record GetAllCustomersQuery() : IQuery<List<Customer>>;
+// public sealed record GetAllCustomersQuery() : IQuery<List<Customer>>;

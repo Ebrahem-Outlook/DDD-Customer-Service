@@ -67,7 +67,7 @@ public sealed class Customer : AggregateRoot<CustomerId>
     {
         Customer customer = new(name, email, address, phoneNumber);
 
-        customer.Raise(new CustomerCreatedDomainEvent(customer));
+        customer.RaiseDomainEvent(new CustomerCreatedDomainEvent(customer));
 
         return customer;
     }
@@ -87,6 +87,6 @@ public sealed class Customer : AggregateRoot<CustomerId>
         PhoneNumber = phone;
         UpdatedOn = DateTime.UtcNow;
 
-        Raise(new CustomerUpdatedDomainEvent(this));
+        RaiseDomainEvent(new CustomerUpdatedDomainEvent(this));
     }
 }

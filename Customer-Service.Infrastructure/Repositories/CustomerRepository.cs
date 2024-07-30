@@ -39,4 +39,9 @@ internal sealed class CustomerRepository(IDbContext dbContext) : ICustomerReposi
     {
         return await dbContext.Set<Customer>().FirstOrDefaultAsync(c => c.Id.Value == id, cancellationToken);
     }
+
+    public Task<Customer?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -19,9 +19,9 @@ public static class DependencyInjection
         // EFCore service...
         services.AddDbContext<AppDbContext>(options =>
         {
-            string? connection = configuration.GetConnectionString("Local-SqlServer");
+            string? connection = configuration.GetConnectionString("Docker-Postgres");
 
-            options.UseSqlServer(connection);
+            options.UseNpgsql(connection);
         });
 
         services.AddScoped<IDbContext>(serviceProvider => serviceProvider.GetRequiredService<AppDbContext>());

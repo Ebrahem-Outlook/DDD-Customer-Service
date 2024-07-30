@@ -41,4 +41,9 @@ internal sealed class CachedCustomerRepository(CustomerRepository decorated, IDi
     {
         return await decorated.GetByNameAsync(name, cancellationToken);
     }
+
+    public Task<Customer?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
 }

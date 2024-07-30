@@ -4,7 +4,7 @@ namespace Customer_Service.Domain.Core.BaseType.Result;
 
 public class Result
 {
-    private Result(bool isSuccess, Error error)
+    protected Result(bool isSuccess, Error error)
     {
         IsSuccess = isSuccess;
         Error = error;

@@ -17,7 +17,7 @@ public sealed record CreateCustomerCommand(
     string Address,
     string PhoneNumber) : ICommand;
 
-internal sealed class CreateCustomerCommandHandler : ICommandHandler<CreateCustomerCommand>
+/*internal sealed class CreateCustomerCommandHandler : ICommandHandler<CreateCustomerCommand>
 {
     private readonly ICustomerRepository _customerRepository;
     private readonly IJwtProvider _jwtProvider;
@@ -31,12 +31,12 @@ internal sealed class CreateCustomerCommandHandler : ICommandHandler<CreateCusto
         Email email = Email.Create(request.Email);
         Address address = Address.Create(request)
     }
-}
+}*/
 
 internal sealed class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCommand>
 {
     public CreateCustomerCommandValidator()
     {
-        RuleFor(customer => customer.FirstName)
+        RuleFor(customer => customer.FirstName).NotNull().NotEmpty().WithMessage("FirstName can't be null.");
     }
 }
