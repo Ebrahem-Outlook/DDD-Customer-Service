@@ -1,5 +1,4 @@
-﻿using Customer_Service.Application.Customers.Queries.GetAll;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Customer_Service.API.Controller;
